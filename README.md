@@ -15,14 +15,11 @@ Some skills that were used:
 - Hooks(manipulate states);
 - Semantic UI for the CSS
 
-### `npm install`
-If you wish to open the application on your computer, clone the project using git clone, enter the project folder and run `npm install` to download the dependencies.
-### `npm start`
+## How to use the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository
+  - Use the command: `git clone git@github.com:manoelVLima/Redux-in-React-Beginner_Project.git` and enter the folder;
+2. Run `npm install` to install dependencies;
+3. Run `npm start` to open the application in your browser.
 
 
