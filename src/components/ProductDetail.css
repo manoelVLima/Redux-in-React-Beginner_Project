@@ -1,0 +1,10 @@
+#container{
+  margin-top: 2em;
+}
+#image-card{
+  width: 50%;
+}
+#loading-card{
+  margin: 0 auto;
+  font-size: 2em;
+}
