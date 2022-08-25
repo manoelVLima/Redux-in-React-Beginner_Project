@@ -3,26 +3,21 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import './ProductDetail.css'
 import { useDispatch, useSelector } from "react-redux";
-import { selectedProduct, removeSelectedProduct } from "../redux/actions/productAction";
+import { fetchProduct, removeSelectedProduct } from "../redux/actions/productAction";
 
 function ProductDetail() {
   const product = useSelector((state) => state.product);
+  console.log(product);
   const { description, title, image, price, category } = product;
   const { id } = useParams();
-  console.log(product);
   const dispatch = useDispatch();
-  const fetchProduct = async () => {
-    const response = await axios
-      .get(`https://fakestoreapi.com/products/${id}`)
-      .catch((err) => {
-        console.log("Error", err);
-      });
-    dispatch(selectedProduct(response.data));
-  };
+  
+
   useEffect(() => {
-    if (id && id !== "") fetchProduct();
+    if (id && id !== "") dispatch(fetchProduct(id));
     return () => dispatch(removeSelectedProduct())
   }, [id]);
+
   return (
     <div id="container" className="ui grid container">
       {Object.keys(product).length === 0 ? (
